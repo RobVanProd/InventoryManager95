@@ -2,19 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Inventory Management{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'inventory/style.css' %}">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory/style.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Inventory Management</h1>
-    </header>
-    <div class="content">
-        {% block content %}{% endblock %}
-    </div>
-    <footer>
-        <p>© 2024 Inventory Management</p>
-    </footer>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
