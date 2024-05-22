@@ -1,0 +1,23 @@
+<!-- inventory/templates/inventory/add_warehouse.html -->
+{% extends 'inventory/base.html' %}
+{% block title %}Add Warehouse{% endblock %}
+{% block content %}
+    <h2>Add New Warehouse</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Warehouse</button>
+    </form>
+{% endblock %}
+
+<!-- inventory/templates/inventory/add_subwarehouse.html -->
+{% extends 'inventory/base.html' %}
+{% block title %}Add Sub-Warehouse{% endblock %}
+{% block content %}
+    <h2>Add New Sub-Warehouse</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Sub-Warehouse</button>
+    </form>
+{% endblock %}
