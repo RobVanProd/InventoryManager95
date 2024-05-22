@@ -66,13 +66,14 @@ WSGI_APPLICATION = 'InventoryManagement95.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd589a02mo1mu6n',
-        'USER': 'u1hkaqh32j97ft',
-        'PASSWORD': 'p9d1b0affe3f2cd511ad3d64fb589c090ca6937a21596b68247c32d70b671aeca',
-        'HOST': 'caij57unh724n3.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+        'NAME': 'd96at0roe5e0f0',
+        'USER': 'wucadcijdwcnel',
+        'PASSWORD': 'ab799570f44c0b638a7760d3e82ba25e1faf700d25e319dd16d32739eae7cb52',
+        'HOST': 'ec2-54-144-112-84.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
+
 
 
 # Password validation
