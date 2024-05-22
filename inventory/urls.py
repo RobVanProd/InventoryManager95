@@ -1,7 +1,8 @@
+# inventory/urls.py
 from django.urls import path
-from . import views
+from .views import add_item, edit_item
 
 urlpatterns = [
-    path('add/', views.add_item, name='add_item'),
-    path('view/', views.view_items, name='view_items'),
+    path('add/', add_item, name='add_item'),
+    path('items/', view_items, name='view_items'),
 ]
