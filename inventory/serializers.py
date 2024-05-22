@@ -1,4 +1,4 @@
-# inventory/serializers.py
+# . inventory/serializers.py
 from rest_framework import serializers
 from .models import InventoryItem, Warehouse, SubWarehouse
 
