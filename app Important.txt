@@ -1,0 +1,7 @@
+cd C:\Users\usa50\InventoryManagement95
+
+heroku run python manage.py changepassword usa50
+
+python manage.py createsuperuser
+
+heroku run python manage.py createsuperuser
