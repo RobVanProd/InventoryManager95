@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Inventory Management</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'inventory/style.css' %}">
-</head>
-<body>
-    <h1>Welcome to Inventory Management</h1>
+{% extends 'base.html' %}
+
+{% block title %}Home - Inventory Management{% endblock %}
+
+{% block content %}
+    <h2>Welcome to Inventory Management</h2>
     <p>This is the home page.</p>
-</body>
-</html>
+{% endblock %}
