@@ -34,10 +34,16 @@ def add_item(request):
         form = InventoryItemForm(request.POST)
         if form.is_valid():
             item = form.save(commit=False)
-            if 'warehouse' in request.POST:
+            if request.POST.get('warehouse'):
                 item.warehouse = Warehouse.objects.get(id=request.POST['warehouse'])
-            if 'subwarehouse' in request.POST:
-                item.subwarehouse = request.user.subwarehouse
+            else:
+                item.warehouse = None
+
+            if request.POST.get('subwarehouse'):
+                item.subwarehouse = SubWarehouse.objects.get(id=request.POST['subwarehouse'])
+            else:
+                item.subwarehouse = None
+
             item.save()
             return redirect('view_items')
     else:
