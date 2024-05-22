@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'your-secret-key'
+SECRET_KEY = 'Mdshammer1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'InventoryManagement95.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://username:password@hostname:port/databasename')
+    'default': dj_database_url.parse('postgres://usrc8df3864b168c417:da6bbfc089fc6218dbe2cc04cd6cf50b@pg-132a9488-ee94-4ddc-998f-51e75d98b223.schematogo.us-east-1.antimony.io:20736/stg57770c57a92e')
 }
 
 # Password validation
