@@ -1,0 +1,17 @@
+{
+  "status": "done",
+  "chunks": {
+    "main": [
+      {
+        "name": "main.js",
+        "publicPath": "/static/frontend/main.js",
+        "path": "frontend/static/frontend/main.js"
+      },
+      {
+        "name": "main.css",
+        "publicPath": "/static/frontend/main.css",
+        "path": "frontend/static/frontend/main.css"
+      }
+    ]
+  }
+}
