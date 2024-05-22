@@ -35,7 +35,7 @@ def add_item(request):
         form = InventoryItemForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('item_list')
+            return redirect('view_items')  # Update to 'view_items'
     else:
         form = InventoryItemForm()
     return render(request, 'inventory/add_item.html', {'form': form})
