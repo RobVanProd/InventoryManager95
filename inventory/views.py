@@ -4,6 +4,9 @@ from .models import InventoryItem, Warehouse, SubWarehouse
 from .forms import InventoryItemForm, WarehouseForm, SubWarehouseForm
 from django.contrib.auth.decorators import login_required
 
+def home(request):
+    return render(request, 'inventory/home.html')
+
 @login_required
 def add_warehouse(request):
     if request.method == 'POST':
