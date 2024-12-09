@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Automated purchase order generation
   - Stock level monitoring and alerts
   - Celery integration for periodic stock checks
+  - Windows services for automated Redis and Celery management
   - API endpoints for managing reorder points and alerts
   - Admin interface integration
 - Supplier Management System

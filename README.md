@@ -122,6 +122,39 @@ celery -A InventoryManagement95 worker -l info
 celery -A InventoryManagement95 beat -l info
 ```
 
+### Automated Services Setup (Windows)
+The project includes scripts to set up Redis and Celery as Windows services that start automatically:
+
+1. Open PowerShell as Administrator
+
+2. Run the service setup script:
+```powershell
+.\scripts\setup_services.ps1
+```
+
+This will:
+- Install Redis and NSSM (Non-Sucking Service Manager) if not present
+- Create and configure three Windows services:
+  - InventoryManager95-Redis: Redis server
+  - InventoryManager95-CeleryWorker: Celery worker process
+  - InventoryManager95-CeleryBeat: Celery beat scheduler
+- Start the services automatically
+
+To remove the services:
+```powershell
+.\scripts\remove_services.ps1
+```
+
+The services will start automatically with Windows, and you can manage them through the Windows Services application or PowerShell commands:
+```powershell
+# Check service status
+Get-Service InventoryManager95-*
+
+# Start/Stop services
+Start-Service InventoryManager95-Redis
+Stop-Service InventoryManager95-Redis
+```
+
 ### Frontend Setup
 1. Navigate to the frontend directory:
 ```bash
