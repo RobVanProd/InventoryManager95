@@ -46,6 +46,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Supplier Management System
+  - Added Supplier model with performance metrics tracking
+  - Added SupplierContact model for managing multiple contacts
+- Purchase Order Management System
+  - Added PurchaseOrder model for managing orders
+  - Added PurchaseOrderItem model for line items
+- Enhanced Inventory Management
+  - Added unit price tracking to InventoryItem
+  - Added active status tracking across models
+  - Added default values for numerical fields
+  - Made location fields optional with defaults
+- Supplier Management System
+  - Supplier model with performance metrics
+  - Additional contacts management
+  - Supplier code validation
+- Purchase Order System
+  - PO creation and management
+  - Line item tracking
+  - Delivery status monitoring
+  - Automatic supplier performance updates
+  - Currency and cost tracking
+
+### Changed
+- Reorganized models into separate files for better maintainability
+- Updated database schema with proper defaults and null constraints
+- Improved model relationships and foreign key constraints
+
 ### Planned Features
 - Advanced reporting and analytics
 - Mobile application support
