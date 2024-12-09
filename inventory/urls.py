@@ -2,11 +2,14 @@ from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 from rest_framework.routers import DefaultRouter
 from . import views
+from .views.reorder import ReorderPointViewSet, StockAlertViewSet
 
 router = DefaultRouter()
 router.register(r'warehouses', views.WarehouseViewSet)
 router.register(r'subwarehouses', views.SubWarehouseViewSet)
 router.register(r'items', views.InventoryItemViewSet)
+router.register(r'reorder-points', ReorderPointViewSet)
+router.register(r'stock-alerts', StockAlertViewSet)
 
 urlpatterns = [
     path('api/view_items/', views.view_items, name='view_items'),
