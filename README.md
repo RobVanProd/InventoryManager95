@@ -178,15 +178,69 @@ We maintain high code quality standards through:
 
 ## Roadmap 🗺️
 
-Planned features and improvements:
+Our development roadmap is organized into several key areas:
 
-- [ ] Advanced reporting and analytics
-- [ ] Mobile application
-- [ ] Barcode scanning support
-- [ ] Integration with popular e-commerce platforms
-- [ ] Enhanced user roles and permissions
-- [ ] Automated inventory forecasting
-- [ ] Email notifications for low stock
+### Phase 1: Advanced Inventory Features
+- [ ] Supplier & Vendor Management System
+  - Supplier profiles and performance tracking
+  - Automated purchase order generation
+  - Lead time tracking and analytics
+- [ ] Automated Reordering System
+  - Configurable reorder points
+  - Email/SMS notifications
+  - Integration with supplier systems
+- [ ] Batch & Lot Tracking
+  - Expiration date management
+  - FIFO/LIFO support
+  - Batch-level quality control
+- [ ] Barcode & QR Integration
+  - Mobile scanning support
+  - Label generation system
+  - Bulk scanning operations
+
+### Phase 2: Enhanced UI/UX
+- [ ] Rich Web Interface
+  - Responsive dashboard design
+  - Advanced filtering and search
+  - Customizable views
+- [ ] Mobile Application
+  - Inventory scanning
+  - Real-time updates
+  - Push notifications
+- [ ] Internationalization
+  - Multi-language support
+  - Multi-currency
+  - Regional format adaptation
+
+### Phase 3: Enterprise Features
+- [ ] Advanced Security
+  - Role-based access control
+  - Audit logging
+  - SSO integration
+- [ ] Analytics & Reporting
+  - Custom report builder
+  - Automated reporting
+  - Predictive analytics
+- [ ] Integration Platform
+  - REST/GraphQL API
+  - Webhook system
+  - Third-party integrations
+
+### Phase 4: Cloud & Performance
+- [ ] Cloud Infrastructure
+  - Multi-region deployment
+  - Auto-scaling
+  - High availability
+- [ ] Performance Optimization
+  - Caching layer
+  - Search optimization
+  - Bulk operations
+- [ ] Monitoring & Reliability
+  - System health monitoring
+  - Automated backups
+  - Disaster recovery
+
+Visit our [detailed roadmap](ROADMAP.md) for more information about upcoming features and development priorities.
 
 ## License 📄
 
