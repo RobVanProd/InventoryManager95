@@ -10,6 +10,12 @@ A modern, user-friendly inventory management system built with Django and React.
 - Multi-user support with role-based access
 - Detailed reporting and analytics
 - Search and filter capabilities
+- Comprehensive dashboard with key metrics:
+  - Total inventory items and value
+  - Warehouse distribution
+  - Low stock alerts
+  - Recent items tracking
+  - Items by warehouse breakdown
 
 ## Tech Stack 🛠
 
@@ -19,6 +25,28 @@ A modern, user-friendly inventory management system built with Django and React.
 - Authentication: JWT
 - State Management: Redux Toolkit
 - API Client: React Query
+
+## Dashboard Features 📊
+
+The dashboard provides real-time insights into your inventory:
+
+- **Total Items**: Track the total number of items across all warehouses
+- **Total Warehouses**: Monitor the number of active storage locations
+- **Low Stock Items**: Quick view of items that need replenishment
+- **Recent Items**: Latest additions and updates to your inventory
+- **Total Inventory Value**: Real-time calculation of total stock worth
+- **Warehouse Distribution**: Visual breakdown of items per warehouse
+
+## API Endpoints 🔌
+
+Key endpoints include:
+
+- `/api/dashboard/stats/`: Get comprehensive dashboard statistics
+- `/api/items/`: Manage inventory items
+- `/api/warehouses/`: Handle warehouse operations
+- `/api/auth/`: User authentication endpoints
+
+All API endpoints are prefixed with `/api/` for consistency and clarity.
 
 ## Getting Started 🚀
 
