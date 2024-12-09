@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - StockAlert model for tracking low stock and stockouts
   - Automated purchase order generation
   - Stock level monitoring and alerts
-  - Management command for periodic stock checks
+  - Celery integration for periodic stock checks
   - API endpoints for managing reorder points and alerts
   - Admin interface integration
 - Supplier Management System

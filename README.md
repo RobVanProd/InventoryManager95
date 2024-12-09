@@ -77,6 +77,7 @@ All API endpoints are prefixed with `/api/` for consistency and clarity.
 - Python 3.8+
 - Node.js 18+
 - PostgreSQL
+- Redis (for Celery)
 - Git
 
 ### Backend Setup
@@ -109,6 +110,16 @@ DATABASE_URL=postgresql://localhost/inventory_db
 5. Run migrations:
 ```bash
 python manage.py migrate
+```
+
+6. Start the Celery worker:
+```bash
+celery -A InventoryManagement95 worker -l info
+```
+
+7. Start the Celery beat scheduler:
+```bash
+celery -A InventoryManagement95 beat -l info
 ```
 
 ### Frontend Setup
