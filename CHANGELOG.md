@@ -68,6 +68,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Delivery status monitoring
   - Automatic supplier performance updates
   - Currency and cost tracking
+- Automated Reordering System
+  - Added ReorderPoint model for configuring reorder rules
+  - Added StockAlert model for tracking low stock and stockouts
+  - Implemented automatic purchase order generation
+  - Added seasonal adjustment factors for reorder quantities
+  - Added safety stock management
+- Enhanced Admin Interface
+  - Added admin views for ReorderPoint and StockAlert models
+  - Added fieldsets for better organization
+  - Added readonly fields for system-managed values
+- New API Endpoints
+  - Added endpoints for managing reorder points
+  - Added endpoints for managing stock alerts
+  - Added manual reorder check functionality
+  - Added alert resolution endpoints
 
 ### Changed
 - Reorganized models into separate files for better maintainability

@@ -4,7 +4,8 @@ from django.contrib import admin
 from .models import (
     Warehouse, SubWarehouse, InventoryItem,
     Supplier, SupplierContact,
-    PurchaseOrder, PurchaseOrderItem
+    PurchaseOrder, PurchaseOrderItem,
+    ReorderPoint, StockAlert
 )
 
 # Register existing models
@@ -39,3 +40,40 @@ class PurchaseOrderItemAdmin(admin.ModelAdmin):
     list_filter = ['purchase_order__supplier']
     search_fields = ['purchase_order__po_number', 'item__name']
     readonly_fields = ['subtotal']
+
+# Register reorder-related models
+@admin.register(ReorderPoint)
+class ReorderPointAdmin(admin.ModelAdmin):
+    list_display = ['item', 'minimum_quantity', 'reorder_quantity', 'is_active', 'last_reorder_date']
+    list_filter = ['is_active']
+    search_fields = ['item__name']
+    readonly_fields = ['last_reorder_date']
+    fieldsets = (
+        (None, {
+            'fields': ('item', 'is_active')
+        }),
+        ('Reorder Settings', {
+            'fields': ('minimum_quantity', 'reorder_quantity', 'preferred_supplier', 'safety_stock')
+        }),
+        ('Advanced Settings', {
+            'fields': ('lead_time_days', 'seasonal_adjustment', 'last_reorder_date')
+        }),
+    )
+
+@admin.register(StockAlert)
+class StockAlertAdmin(admin.ModelAdmin):
+    list_display = ['item', 'alert_type', 'priority', 'created_at', 'is_active']
+    list_filter = ['alert_type', 'priority', 'is_active']
+    search_fields = ['item__name', 'message']
+    readonly_fields = ['created_at', 'resolved_at']
+    fieldsets = (
+        (None, {
+            'fields': ('item', 'alert_type', 'priority', 'message')
+        }),
+        ('Status', {
+            'fields': ('is_active', 'created_at', 'resolved_at')
+        }),
+        ('Auto-reorder', {
+            'fields': ('auto_reorder_triggered', 'related_purchase_order')
+        }),
+    )
