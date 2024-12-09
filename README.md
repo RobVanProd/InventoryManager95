@@ -1,6 +1,12 @@
 # InventoryManager95 🏢
 
-A modern, user-friendly inventory management system built with Django and React.
+A modern, user-friendly inventory management system built with Django and React. InventoryManager95 helps businesses efficiently track, manage, and optimize their inventory across multiple warehouses with real-time insights and analytics.
+
+## Project Status 🚦
+
+Current Version: 1.0.0
+Status: Active Development
+Last Updated: December 2024
 
 ## Features ✨
 
@@ -25,6 +31,29 @@ A modern, user-friendly inventory management system built with Django and React.
 - Authentication: JWT
 - State Management: Redux Toolkit
 - API Client: React Query
+- Testing: Jest (Frontend), PyTest (Backend)
+- CI/CD: GitHub Actions
+
+## Project Structure 📂
+
+```
+InventoryManager95/
+├── backend/
+│   ├── inventory/           # Main Django app
+│   │   ├── models/         # Database models
+│   │   ├── views/          # API views and logic
+│   │   ├── services/       # Business logic layer
+│   │   └── tests/          # Backend tests
+│   └── InventoryManagement95/  # Django project settings
+├── inventory-management-ui/
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/         # Page components
+│   │   ├── services/      # API and auth services
+│   │   └── tests/        # Frontend tests
+│   └── public/           # Static assets
+└── docs/                # Additional documentation
+```
 
 ## Dashboard Features 📊
 
@@ -55,42 +84,39 @@ All API endpoints are prefixed with `/api/` for consistency and clarity.
 - Python 3.8+
 - Node.js 18+
 - PostgreSQL
+- Git
 
 ### Backend Setup
 
-1. Create and activate a virtual environment:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/InventoryManager95.git
+cd InventoryManager95
+```
+
+2. Create and activate a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Set up environment variables:
+4. Set up environment variables:
 Create a `.env` file in the root directory with:
-```
+```env
 DEBUG=True
 SECRET_KEY=your-secret-key
 ALLOWED_HOSTS=localhost,127.0.0.1
 DATABASE_URL=postgresql://localhost/inventory_db
 ```
 
-4. Run migrations:
+5. Run migrations:
 ```bash
 python manage.py migrate
-```
-
-5. Create a superuser:
-```bash
-python manage.py createsuperuser
-```
-
-6. Start the development server:
-```bash
-python manage.py runserver
 ```
 
 ### Frontend Setup
@@ -110,34 +136,14 @@ npm install
 npm run dev
 ```
 
-The application will be available at:
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:8000
+## Testing 🧪
 
-## Development 🛠
-
-### Code Quality
-
-The project uses several tools to ensure code quality:
-
-- Black for Python code formatting
-- ESLint and Prettier for JavaScript/TypeScript
-- Pre-commit hooks for consistent code style
-- TypeScript for type safety
-
-To set up pre-commit hooks:
+### Backend Tests
 ```bash
-pre-commit install
+pytest
 ```
 
-### Testing
-
-Run backend tests:
-```bash
-python manage.py test
-```
-
-Run frontend tests:
+### Frontend Tests
 ```bash
 cd inventory-management-ui
 npm test
@@ -145,16 +151,56 @@ npm test
 
 ## Contributing 🤝
 
+We welcome contributions! Please follow these steps:
+
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License 📝
+Please ensure your PR:
+- Includes tests for new functionality
+- Updates documentation as needed
+- Follows our coding standards
+- Includes a clear description of changes
+
+## Code Quality 📈
+
+We maintain high code quality standards through:
+
+- Comprehensive test coverage
+- ESLint and Prettier for frontend code style
+- Black and isort for backend code formatting
+- Continuous Integration via GitHub Actions
+- Regular dependency updates
+- Code review process
+
+## Roadmap 🗺️
+
+Planned features and improvements:
+
+- [ ] Advanced reporting and analytics
+- [ ] Mobile application
+- [ ] Barcode scanning support
+- [ ] Integration with popular e-commerce platforms
+- [ ] Enhanced user roles and permissions
+- [ ] Automated inventory forecasting
+- [ ] Email notifications for low stock
+
+## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Support 💬
 
-For support, please open an issue in the repository.
+- Create an issue for bug reports or feature requests
+- Join our Discord community for discussions
+- Check our Wiki for additional documentation
+- Email support: support@inventorymanager95.com
+
+## Acknowledgments 🙏
+
+- All our contributors and community members
+- Open source libraries and frameworks used in this project
+- Our early adopters and beta testers
